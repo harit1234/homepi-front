@@ -1,0 +1,21 @@
+<div class="grid" style="font-family: fantasy; font-size: .8em">
+  <div *ngIf="notesExist; then thenblock ;else elseblock"></div>
+  <ng-template #thenblock >
+    <div class="notecard" *ngFor="let el of notesArray; index as i;"><h6 style="grid-row:1/2">{{el.heading}}</h6><small style="grid-row:2/3">{{el.content}}</small>
+    <button style="grid-column:3/4" (click)="deletenote(notesArray.indexOf(el))"> delete note </button>
+    </div>
+  </ng-template>
+  <ng-template #elseblock>
+    notes go here
+  </ng-template>
+  <div *ngIf="addnotebox; then addnoteblock; else noneblock"></div>
+  <ng-template #addnoteblock>
+    <div class="mb-2" style="background-color:blanchedalmond; border-radius: 5px; margin: 4px">
+    Heading:<input type="text" class="form-control" style="max-height: 1.35em" [(ngModel)]="newheading">
+    Content:<input type="text" class="form-control mb-2" style="max-height: 1.35em" [(ngModel)]="newcontent">
+    <button class="btn btn-info" style="padding:1px;border-radius: 0; max-height: 1.35em" (click)="addnote()">save note</button>
+    </div>
+  </ng-template>
+  <ng-template #noneblock></ng-template>
+  <button class="btn btn-primary" (click)="add()">Add note</button>
+</div>

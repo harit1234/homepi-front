@@ -1,0 +1,19 @@
+.addedinput{
+    max-width: 600px;
+    font-family: fantasy;
+    padding: 5px;
+    padding-top: 10px;
+}
+.contain{
+    display: grid;
+    grid-template: 1fr/1fr 2fr 1fr;
+}
+.form-container{
+    grid-column: 2/3;
+}
+input.ng-touched.ng-invalid{
+    border-left: solid 5px red;
+}
+input.ng-touched.ng-valid{
+    border-left: solid 5px green;
+}

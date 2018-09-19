@@ -1,0 +1,4 @@
+.notecard{
+    display: grid;
+    grid-template: .5fr 1.5fr/repeat(3,1fr);
+}

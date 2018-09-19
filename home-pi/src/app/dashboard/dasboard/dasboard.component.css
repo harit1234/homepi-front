@@ -1,0 +1,22 @@
+div#contain{
+    max-width: 600px;
+}
+button{
+    border-radius: 8px;
+}
+div#logocontain{
+    display: grid;
+    grid-column: 2/3;
+    grid-template: 1fr/ 1fr 1fr 1fr;
+    max-width: 600px;
+}
+img{
+    grid-column: 2/3;
+}
+.logogrid{
+    display: grid;
+    grid-template: 1fr/ 1fr 1fr 1fr;
+}
+body{
+    height: 100%;
+}

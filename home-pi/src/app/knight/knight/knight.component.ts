@@ -28,8 +28,8 @@ export class KnightComponent{
       this.http.subscribe((res:any)=>{
         if(res.msg == 'loggedin'){
           this.kp.loggedin = true;
+          this.kp.token = res.token;
           this.router.navigate(['knightSignin','roundtable',a.value.username])
-          console.log(typeof(this.http))
         }},(err)=>{
           console.log(err)
         }

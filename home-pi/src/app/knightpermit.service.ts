@@ -4,4 +4,5 @@ import { Injectable } from '@angular/core';
 export class KnightpermitService {
   constructor() { }
   loggedin:boolean = false;
+  token:any;
 }

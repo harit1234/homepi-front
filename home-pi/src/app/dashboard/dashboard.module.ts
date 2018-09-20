@@ -14,6 +14,10 @@ const route = [{
 {
   path:'knightSignin',
   loadChildren:'../knight/knight.module#KnightModule'
+},
+{
+  path:'**',
+  redirectTo: ''
 }]
 
 @NgModule({

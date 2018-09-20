@@ -17,5 +17,5 @@ export class RoundTableComponent implements OnInit {
 
   ngOnInit() {
   }
-
+ 
 }

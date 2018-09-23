@@ -1,0 +1,6 @@
+div.msg-interface{
+    width : 100%;
+    display: grid;
+    grid-template: 1fr 8px/ repeat(4,1fr);
+    grid-column-gap: 2px;
+}

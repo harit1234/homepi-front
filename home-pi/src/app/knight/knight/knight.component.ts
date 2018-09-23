@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { KnightpermitService } from '../../knightpermit.service';
-import { Router, ActivatedRoute } from '@angular/router'
+import { Router,  } from '@angular/router'
 
 @Component({
   selector: 'app-knight',

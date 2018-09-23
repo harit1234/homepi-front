@@ -1,3 +1,23 @@
-<p>
-  chats works!
+<p>i
+  
 </p>
+<!-- <div class="msg-interface" style="font-size:0.8em">
+<div class="msg-container" style="grid-row:1/2">
+<div *ngIf="chatExist; then thenblock ; else elseblock"></div>
+<ng-template #thenblock>
+  <div class="msgwall"  *ngFor="let el of chatarray">
+    <div class="msg"><h6>{{el.source}}</h6><br><small>{{el.message}}</small><br><button (click)="delmsg(chatarray.indexOf(el))">delete</button></div>
+  </div>
+</ng-template>
+<ng-template #elseblock>
+</ng-template>
+<div *ngIf="showwrtmsgbox; then msgbox; else nobox"></div>
+<ng-template #msgbox>
+  <input type="text" [(value)]="writtenMsg">
+  <input type="text" [(value)]="msgTo">
+  <button class="btn" (click)="sendmsg()">send</button>
+</ng-template>
+<ng-template #nobox></ng-template>
+</div>
+<button class="btn btn-primary" style="grid-row:2/3" (click)="writemsg()">writemsg</button>
+</div> -->

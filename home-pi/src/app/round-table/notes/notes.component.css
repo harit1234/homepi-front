@@ -1,4 +1,44 @@
 .notecard{
-    display: grid;
-    grid-template: .5fr 1.5fr/repeat(3,1fr);
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: space-around;
+    position: relative;
+}
+
+.note{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: none;
+    justify-content:flex-start;
+    align-items: center;
+    align-content: flex-start;
+    background-color: azure;
+    box-shadow: black 1px 1px 2px;
+}
+.note:hover{
+    box-shadow: black 2px 2px 3px;
+}
+.grid{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+button:hover{
+    box-shadow :black 2px 2px 3px;
+}
+
+.del{
+    margin-top:2px;
+    border-radius:0;align-self:flex-end;
+    /* box-shadow:grey 1px 1px 1px; */
+    position: absolute;
+    bottom:0;
+    right: 0;
+    padding:1px;
+    background-color: rgb(138, 38, 38);
+    -webkit-text-fill-color: white;
+    border:rgb(138, 38, 38) solid;
 }

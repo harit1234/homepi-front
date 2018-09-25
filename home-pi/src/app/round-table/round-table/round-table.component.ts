@@ -15,6 +15,10 @@ export class RoundTableComponent implements OnInit {
     this.knightname = ar.snapshot.params.id;
     }
 
+    showChat:boolean;
+    showNote:boolean;
+    showHC:boolean;
+
   ngOnInit() {
   }
  

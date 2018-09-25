@@ -1,14 +1,7 @@
-div.container-fluid{
-display: grid;
-grid-template: 1.5fr 1fr/repeat(3,1fr);
-min-height: 300px;
-margin-top: 20px;
-grid-column-gap: 2px;
-grid-row-gap: 2px;
-}
+
 .wall{
     background-color:lightblue;
     border-radius: 5px;
     min-height: 200PX;
-    box-shadow: black 2px 2px 5px;
+    border: solid black 1px;
 }

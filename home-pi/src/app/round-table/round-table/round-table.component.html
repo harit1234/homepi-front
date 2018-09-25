@@ -1,11 +1,34 @@
-<div class="container-fluid">
-  <div class="wall" style="grid-column: 1/2;grid-row:1/3">
-    <app-notes></app-notes>
-  </div>
-  <div class="wall" style="grid-column:2/4;grid-row:1/2">
-    <app-hc></app-hc>
-  </div>
-  <div class="wall" style="grid-column:2/4;grid-row:2/3">
-    <app-chats></app-chats>
-  </div>
-</div> 
+<div class="container-fluid" style="font-family:fantasy">
+  <nav class="navbar navbar-light bg-info">
+    <div class="navbar-brand">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <img src="../../../assets/dashboard-logo.png">
+          <span style="text-decoration-color:white"></span>
+        </a>
+      <ul class="dropdown-menu">
+         <button class="dropdown-item" (click)="logout()">logout</button>
+      </ul>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+  <ul class="navbar-nav nav-justify">
+    <li class="nav-item">
+      <a href="#notes" class="nav-link" data-toggle="collapse">Notes</a>
+    </li>
+    <li class="nav-item">
+      <a href="#hc" class=" nav-link" data-toggle="collapse">HomeControl</a>
+    </li>
+    <!-- <li class="nav-item dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account</a>
+      <ul class="dropdown-menu">
+         <button class="dropdown-item" (click)="logout()">logout</button>
+      </ul>
+    </li> -->
+  </ul>
+</div>
+</nav>
+  <app-notes class="wall hide" id="notes"></app-notes>
+  <app-hc class="wall hide" id="hc"></app-hc>
+</div>

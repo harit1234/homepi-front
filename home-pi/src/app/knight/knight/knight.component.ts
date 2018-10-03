@@ -21,7 +21,7 @@ export class KnightComponent{
    }
   
   sendForm = (a:any):void=> {
-    this.http = this._http.post('http://localhost:3000/',
+    this.http = this._http.post('http://raspberrypi.local:3000/',
     {
       username:a.value.username,
       password:a.value.password});

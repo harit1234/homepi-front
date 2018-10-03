@@ -17,19 +17,19 @@ import { KnightpermitService } from './knightpermit.service';
        let httpheader = new HttpHeaders;
        this.headers = httpheader.set('token',kp.token)
 
-       this.notes = _http.get('http://localhost:3000/notes/getnotes/%20:'+ ar.snapshot.params.id,{headers:this.headers})
+       this.notes = _http.get('http://raspberrypi.local:3000/notes/getnotes/%20:'+ ar.snapshot.params.id,{headers:this.headers})
        this.notes.subscribe((res)=>{
          console.log(res.notes)
        })
       }
       saveNote(obj:any){
-        this._http.post('http://localhost:3000/notes/postnote/%20:'+ this.ar.snapshot.params.id,{heading:obj.heading,content:obj.content},{headers:this.headers}).subscribe(
+        this._http.post('http://raspberrypi.local:3000/notes/postnote/%20:'+ this.ar.snapshot.params.id,{heading:obj.heading,content:obj.content},{headers:this.headers}).subscribe(
           (res:any)=>{console.log(res.msg)},
           (err)=>{console.log(err)}
         )
       }
       removeNote(obj:any){
-        this._http.post('http://localhost:3000/notes/deletenote/%20:'+ this.ar.snapshot.params.id,{heading : obj.heading,content:obj.content},{headers:this.headers}).subscribe(
+        this._http.post('http://raspberrypi.local:3000/notes/deletenote/%20:'+ this.ar.snapshot.params.id,{heading : obj.heading,content:obj.content},{headers:this.headers}).subscribe(
           (res:any)=>{console.log(res)},
           (err)=>{console.log(err)}
         )

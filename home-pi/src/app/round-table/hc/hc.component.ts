@@ -12,10 +12,16 @@ export class HcComponent {
   constructor(private _http : HttpClient, private kp:KnightpermitService) { }
   headers = new HttpHeaders
   switchon(){
-    this._http.post('http://raspberrypi.local:3000', {buttonStatus : 'true'},{headers:this.headers.set('token',this.kp.token)})
+    this._http.post('http://raspberrypi.local:3000', {buttonStatus : 'true'},{headers:this.headers.set('token',this.kp.token)}).subscribe(
+      (data)=>{console.log(data)},
+      (err)=>{console.log(err)}
+    )
   }
   switchoff(){
-    this._http.post('http://raspberrypi.local:3000', {buttonStatus : 'false'},{headers:this.headers.set('token',this.kp.token)})
+    this._http.post('http://raspberrypi.local:3000', {buttonStatus : 'false'},{headers:this.headers.set('token',this.kp.token)}).subscribe(
+      (data)=>{console.log(data)},
+      (err)=>{console.log(err)}
+    )
   }
  
 }

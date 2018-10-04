@@ -6,6 +6,10 @@ import { RouterModule } from '@angular/router';
 
 const route = [{ path : '',
   loadChildren: './dashboard/dashboard.module#DashboardModule',
+},
+{
+  path: '**',
+  redirectTo: ''
 }]
 
 @NgModule({

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
-import { KnightpermitService } from '../../knightpermit.service'
+import { KnightpermitService } from '../../knightpermit.service';
 
 @Component({
   selector: 'app-hc',
